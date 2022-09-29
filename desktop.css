@@ -1,0 +1,114 @@
+body
+{
+	background: #111 url("img/tło.png");
+	color: var(--white);
+	font-family:'Open Sans', sans-serif;
+	font-size: 20px;
+}
+:root{
+	--blue: #0091e6;
+	--black: #000;
+	--white: #fff;
+	--background: #222;
+}
+*, *::before, *::after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+::selection{
+	background-color: #14bcd3;
+	color: var(--white);
+}
+/* Content */
+#content{
+	max-width: 75vw;
+	margin: 20px auto;
+	background-color: var(--background);
+	border-radius: 5px;
+	padding: 10px 25px;
+}
+#content *:not(h1, .answers, .exercise){
+	margin-bottom: 0.5em;
+}
+h1{
+	text-align: center;
+	letter-spacing: 4px;
+	font-size: 45px;
+	text-transform: uppercase;
+}
+header p{
+	font-size: 23px;
+	width: 95%;
+	margin: 0 auto;
+}
+/* ZADANIE */
+.exercise{
+	width: 100%;
+	font-size: 30px;
+}
+.exercise *{
+	padding-left: 10px;
+}
+b{
+	font-size: 18px;
+}
+.image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.image img{
+	width: 50%;
+	height: auto;
+}
+.answers li{
+	margin-left: 50px;
+	font-size: 0.7em;
+	padding-left: 5px;
+}
+.answers li::marker{
+	font-weight: bold;
+	margin-right: 20px;
+}
+.answers .true{
+	color:lawngreen;
+}
+.exercise::after, header::after{	
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: gray;
+	margin-top: 0.5em;
+}
+.once{ 
+	position: relative;
+}
+.once::before{
+	font-size: 20px;
+	position: absolute;
+	top: 0.5em;
+	right: 20px;
+}
+.once::before{
+	content: '1pkt';
+}
+ul{
+	width: 90%;
+	margin: 0 auto;
+}
+/*FOOTER*/
+footer{
+	width: 100%;
+	font-size: 20px;
+	background: var(--black);
+	display: flex;
+	justify-content: flex-end;
+	color: var(--white);
+}
+#page__end{
+	padding: 5px 0;
+	margin-right: 20px;
+	font-style: italic;
+}
